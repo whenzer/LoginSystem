@@ -8,7 +8,7 @@ import bcrypt from 'bcrypt';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const PORT = 5000;
+const PORT = 3000;
 const app = express();
 
 app.use(express.static(path.resolve(__dirname, "../frontend")));
