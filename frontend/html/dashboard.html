@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity - Community Liquor Blog</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <!-- SVG Logo for INFINITY -->
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM13.0607 10.9393C13.6464 10.3536 14.5964 10.3536 15.1822 10.9393L17.5147 13.2718C18.1005 13.8575 18.1005 14.8075 17.5147 15.3932C16.929 15.9789 15.979 15.9789 15.3932 15.3932L12 12L8.6068 15.3932C8.02103 15.9789 7.07103 15.9789 6.48526 15.3932C5.89949 14.8075 5.89949 13.8575 6.48526 13.2718L8.81774 10.9393C9.4035 10.3536 10.3535 10.3536 10.9393 10.9393L12 12L13.0607 10.9393ZM12 8.525C11.7348 8.525 11.4804 8.63045 11.293 8.81792L8.525 11.5859C8.33753 11.7734 8.23208 12.0278 8.23208 12.293C8.23208 12.5582 8.33753 12.8126 8.525 13L11.293 15.768C11.4804 15.9555 11.7348 16.0609 12 16.0609C12.2652 16.0609 12.5196 15.9555 12.707 15.768L15.475 13C15.6625 12.8126 15.7679 12.5582 15.7679 12.293C15.7679 12.0278 15.6625 11.7734 15.475 11.5859L12.707 8.81792C12.5196 8.63045 12.2652 8.525 12 8.525Z" fill="#FF6F61"/>
+            </svg>
+            <span>INFINITY BLOG</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="#home" class="nav-item active" id="navHome">Home</a>
+            <a href="#blog" class="nav-item" id="navBlog">Blog</a>
+            <a href="#reviews" class="nav-item" id="navReviews">Reviews</a>
+            <a href="#about" class="nav-item" id="navAbout">About Us</a>
+            <a href="#contact" class="nav-item" id="navContact">Contact</a>
+            <a href="#" class="nav-item create-post-btn" id="navCreatePost">Create Post</a>
+        </nav>
+        <div class="header-icons">
+            <span class="user-id-display" id="userIdDisplay">User ID: placeholder_user</span>
+            <a href="#" class="nav-item" id="dboardLogin">Login</a>
+            <i class="fas fa-search"></i>
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Home Section -->
+        <section class="hero-section active-section" id="homeSection">
+            <div class="hero-text">
+                <h1>Drive Digital Differently</h1>
+                <p>Experience next-level insights and strategies that propel your growth.</p>
+                <button class="read-more-btn" id="exploreArticlesBtn">Explore Articles</button>
+            </div>
+            <div class="hero-image-container">
+                <!-- Placeholder for the abstract digital/propeller image -->
+                <img src="https://placehold.co/600x400/FF6F61/FFFFFF?text=Digital+Innovation" alt="Digital Innovation Graphic">
+            </div>
+        </section>
+
+        <section class="as-seen-on-section" id="asSeenOnSection">
+            <h2>As Seen On</h2>
+            <div class="partners-grid">
+                <!-- Placeholder logos from the image - using simple text for now -->
+                <div class="partner-logo"><img src="https://placehold.co/100x40/f0f0f0/666?text=Google" alt="Google Logo"></div>
+                <div class="partner-logo"><img src="https://placehold.co/100x40/f0f0f0/666?text=Forbes" alt="Forbes Logo"></div>
+                <div class="partner-logo"><img src="https://placehold.co/100x40/f0f0f0/666?text=TechCrunch" alt="TechCrunch Logo"></div>
+                <div class="partner-logo"><img src="https://placehold.co/100x40/f0f0f0/666?text=Inc." alt="Inc. Logo"></div>
+                <div class="partner-logo"><img src="https://placehold.co/100x40/f0f0f0/666?text=The+Verge" alt="The Verge Logo"></div>
+                <div class="partner-logo"><img src="https://placehold.co/100x40/f0f0f0/666?text=Wired" alt="Wired Logo"></div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section class="latest-articles-section" id="blogSection">
+            <h2>Latest Blog Posts</h2>
+            <div class="blog-grid" id="blogPostsGrid">
+                <!-- Blog posts will be dynamically loaded here by JavaScript (or static placeholders) -->
+                <div class="blog-card">
+                    <img src="https://placehold.co/300x200/E62B0A/FFFFFF?text=Blog+Post+1" alt="Blog Post Image 1">
+                    <h3>The Future of AI in Content Creation</h3>
+                    <p class="post-meta">By Jane Doe on 2024-05-15</p>
+                    <p>Discover how artificial intelligence is revolutionizing the way we generate and consume content...</p>
+                    <span class="comments-count">2 Comments</span>
+                    <a href="#" class="read-article-btn" data-id="static-blog-1">Read Article</a>
+                </div>
+                <div class="blog-card">
+                    <img src="https://placehold.co/300x200/FF6F61/FFFFFF?text=Blog+Post+2" alt="Blog Post Image 2">
+                    <h3>Mastering SEO for Organic Growth</h3>
+                    <p class="post-meta">By John Smith on 2024-05-10</p>
+                    <p>Unlock the secrets to higher search rankings and drive more organic traffic to your website...</p>
+                    <span class="comments-count">1 Comment</span>
+                    <a href="#" class="read-article-btn" data-id="static-blog-2">Read Article</a>
+                </div>
+                <div class="blog-card">
+                    <img src="https://placehold.co/300x200/5E6C84/FFFFFF?text=Blog+Post+3" alt="Blog Post Image 3">
+                    <h3>The Art of Storytelling in Brand Building</h3>
+                    <p class="post-meta">By Emily White on 2024-05-01</p>
+                    <p>In a crowded market, authentic storytelling is what truly differentiates a brand...</p>
+                    <span class="comments-count">0 Comments</span>
+                    <a href="#" class="read-article-btn" data-id="static-blog-3">Read Article</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Liquor Reviews Section -->
+        <section class="liquor-reviews-section" id="reviewsSection">
+            <h2>Community Liquor Reviews</h2>
+            <div class="reviews-grid" id="liquorReviewsGrid">
+                <!-- Liquor reviews will be dynamically loaded here by JavaScript (or static placeholders) -->
+                <div class="review-card">
+                    <img src="https://placehold.co/300x200/FF6F61/FFFFFF?text=Macallan" alt="Macallan 18 Year Old Image">
+                    <h3>Macallan 18 Year Old</h3>
+                    <div class="stars-display">
+                        <i class="fas fa-star" style="color: gold;"></i>
+                        <i class="fas fa-star" style="color: gold;"></i>
+                        <i class="fas fa-star" style="color: gold;"></i>
+                        <i class="fas fa-star" style="color: gold;"></i>
+                        <i class="fas fa-star" style="color: gold;"></i>
+                    </div>
+                    <p class="review-meta">By WhiskyLover on 2024-05-20</p>
+                    <p>A truly exceptional single malt. Rich, complex, with notes of dried fruit, spice...</p>
+                </div>
+                <div class="review-card">
+                    <img src="https://placehold.co/300x200/E62B0A/FFFFFF?text=Don+Papa" alt="Don Papa Rum Image">
+                    <h3>Don Papa Rum</h3>
+                    <div class="stars-display">
+                        <i class="fas fa-star" style="color: gold;"></i>
+                        <i class="fas fa-star" style="color: gold;"></i>
+                        <i class="fas fa-star" style="color: gold;"></i>
+                        <i class="fas fa-star" style="color: gold;"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p class="review-meta">By RumEnthusiast on 2024-05-18</p>
+                    <p>Sweet and smooth, with hints of vanilla and tropical fruits. Great for sipping...</p>
+                </div>
+                <div class="review-card">
+                    <img src="https://placehold.co/300x200/5E6C84/FFFFFF?text=Hendrick%27s" alt="Hendrick's Gin Image">
+                    <h3>Hendrick's Gin</h3>
+                    <div class="stars-display">
+                        <i class="fas fa-star" style="color: gold;"></i>
+                        <i class="fas fa-star" style="color: gold;"></i>
+                        <i class="fas fa-star" style="color: gold;"></i>
+                        <i class="fas fa-star" style="color: gold;"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p class="review-meta">By GinFanatic on 2024-05-12</p>
+                    <p>Unique and refreshing. The cucumber and rose botanicals give it a distinct flavor...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Blog Post View (initially hidden) -->
+        <section class="blog-detail-view" id="blogDetailSection">
+            <button class="back-to-blog-btn" id="backToBlogListBtn"><i class="fas fa-arrow-left"></i> Back to Blog</button>
+            <h2 id="detailPostTitle">The Future of AI in Content Creation (Example)</h2>
+            <p class="post-meta">By <span id="detailPostAuthor">Jane Doe</span> on <span id="detailPostDate">2024-05-15</span></p>
+            <div class="post-content" id="detailPostContent">
+                <p>Artificial intelligence is rapidly transforming the marketing landscape, offering new ways to personalize content, automate campaigns, and analyze customer behavior. From chatbots enhancing customer service to predictive analytics guiding strategy, AI is no longer a futuristic concept but a present-day necessity for businesses aiming to stay competitive. Understanding its applications and ethical implications is crucial for marketers looking to leverage its full potential.</p>
+                <p>This is a placeholder for detailed blog content. In a real application, this content would be loaded dynamically based on the blog post selected. You can imagine a much longer and more in-depth article here.</p>
+            </div>
+
+            <div class="comments-section">
+                <h3>Comments (<span id="commentsCount">2</span>)</h3>
+                <div class="comments-list" id="commentsList">
+                    <!-- Static comments for demonstration -->
+                    <div class="comment-item">
+                        <p>This is a great article! Very insightful on AI trends.</p>
+                        <p class="comment-meta"><strong>Commenter1</strong> on 2024-05-15 10:30 AM</p>
+                    </div>
+                    <div class="comment-item">
+                        <p>I completely agree. AI is changing everything. Thanks for sharing!</p>
+                        <p class="comment-meta"><strong>Commenter2</strong> on 2024-05-15 11:00 AM</p>
+                    </div>
+                </div>
+                <div class="add-comment-form">
+                    <h4>Add a Comment</h4>
+                    <textarea id="newCommentText" placeholder="Write your comment here..." rows="4"></textarea>
+                    <button id="submitCommentBtn">Post Comment</button>
+                    <p class="comment-error-message" id="commentErrorMessage"></p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="reliable-marketing-section" id="reliableMarketingSection">
+            <h2>Reliable Marketing With No Guesswork</h2>
+            <p>Big brands trust us.</p>
+            <div class="big-brand-logos">
+                <!-- More placeholder logos from the image -->
+                <img src="https://placehold.co/100x50/f0f0f0/333?text=Brand+A" alt="Brand A Logo">
+                <img src="https://placehold.co/100x50/f0f0f0/333?text=Brand+B" alt="Brand B Logo">
+                <img src="https://placehold.co/100x50/f0f0f0/333?text=Brand+C" alt="Brand C Logo">
+                <img src="https://placehold.co/100x50/f0f0f0/333?text=Brand+D" alt="Brand D Logo">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <!-- SVG Logo for INFINITY in footer -->
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM13.0607 10.9393C13.6464 10.3536 14.5964 10.3536 15.1822 10.9393L17.5147 13.2718C18.1005 13.8575 18.1005 14.8075 17.5147 15.3932C16.929 15.9789 15.979 15.9789 15.3932 15.3932L12 12L8.6068 15.3932C8.02103 15.9789 7.07103 15.9789 6.48526 15.3932C5.89949 14.8075 5.89949 13.8575 6.48526 13.2718L8.81774 10.9393C9.4035 10.3536 10.3535 10.3536 10.9393 10.9393L12 12L13.0607 10.9393ZM12 8.525C11.7348 8.525 11.4804 8.63045 11.293 8.81792L8.525 11.5859C8.33753 11.7734 8.23208 12.0278 8.23208 12.293C8.23208 12.5582 8.33753 12.8126 8.525 13L11.293 15.768C11.4804 15.9555 11.7348 16.0609 12 16.0609C12.2652 16.0609 12.5196 15.9555 12.707 15.768L15.475 13C15.6625 12.8126 15.7679 12.5582 15.7679 12.293C15.7679 12.0278 15.6625 11.7734 15.475 11.5859L12.707 8.81792C12.5196 8.63045 12.2652 8.525 12 8.525Z" fill="#FFFFFF"/>
+            </svg>
+            <span>INFINITY BLOG</span>
+        </div>
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <p>&copy; 2024 Infinity Blog. All rights reserved.</p>
+    </footer>
+
+    <!-- Create Post/Review Modal -->
+    <div id="createPostModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModalBtn">&times;</span>
+            <h2>Create New Post</h2>
+            <div class="modal-toggle-buttons">
+                <button id="showBlogPostForm" class="active">Blog Post</button>
+                <button id="showLiquorReviewForm">Liquor Review</button>
+            </div>
+
+            <!-- Blog Post Form -->
+            <form id="blogPostForm" class="active-form">
+                <div class="input-group">
+                    <label for="postTitle">Title</label>
+                    <input type="text" id="postTitle" placeholder="Enter post title" required>
+                </div>
+                <div class="input-group">
+                    <label for="postContent">Content</label>
+                    <textarea id="postContent" placeholder="Write your blog post content here..." rows="10" required></textarea>
+                </div>
+                <button type="submit" id="submitBlogPostBtn">Publish Blog Post</button>
+                <p class="form-error-message" id="blogPostErrorMessage"></p>
+            </form>
+
+            <!-- Liquor Review Form -->
+            <form id="liquorReviewForm" class="hidden-form">
+                <div class="input-group">
+                    <label for="liquorName">Liquor Name</label>
+                    <input type="text" id="liquorName" placeholder="e.g., Macallan 18, Don Papa Rum" required>
+                </div>
+                <div class="input-group">
+                    <label for="reviewContent">Your Review</label>
+                    <textarea id="reviewContent" placeholder="Write your liquor review here..." rows="6" required></textarea>
+                </div>
+                <div class="input-group rating-input-group">
+                    <label>Rating:</label>
+                    <div class="stars" id="reviewStars">
+                        <i class="far fa-star" data-value="1"></i>
+                        <i class="far fa-star" data-value="2"></i>
+                        <i class="far fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    <input type="hidden" id="selectedRating" value="0">
+                </div>
+                <button type="submit" id="submitLiquorReviewBtn">Submit Review</button>
+                <p class="form-error-message" id="liquorReviewErrorMessage"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- The original script.js from the stable version. No changes applied as per request. -->
+    <script type="module" src="../scripts/script.js"></script>
+</body>
+</html>

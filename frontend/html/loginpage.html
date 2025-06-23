@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity - Login/Signup</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome for icons (user, lock, social media, and back arrow) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="login-container" id="mainContainer">
+            <!-- Left panel: Form section -->
+            <div class="panel form-panel">
+                <!-- Back Button -->
+                <a class="back-button" aria-label="Go back to dashboard" id="btnBackLogin">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <!-- Inner container for forms to slide -->
+                <div class="forms-wrapper" id="formsWrapper">
+                    <!-- Login Form Content -->
+                    <div class="form-content login-form active" id="loginForm">
+                        <div class="logo">
+                            <!-- SVG Logo for INFINITY -->
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM13.0607 10.9393C13.6464 10.3536 14.5964 10.3536 15.1822 10.9393L17.5147 13.2718C18.1005 13.8575 18.1005 14.8075 17.5147 15.3932C16.929 15.9789 15.979 15.9789 15.3932 15.3932L12 12L8.6068 15.3932C8.02103 15.9789 7.07103 15.9789 6.48526 15.3932C5.89949 14.8075 5.89949 13.8575 6.48526 13.2718L8.81774 10.9393C9.4035 10.3536 10.3535 10.3536 10.9393 10.9393L12 12L13.0607 10.9393ZM12 8.525C11.7348 8.525 11.4804 8.63045 11.293 8.81792L8.525 11.5859C8.33753 11.7734 8.23208 12.0278 8.23208 12.293C8.23208 12.5582 8.33753 12.8126 8.525 13L11.293 15.768C11.4804 15.9555 11.7348 16.0609 12 16.0609C12.2652 16.0609 12.5196 15.9555 12.707 15.768L15.475 13C15.6625 12.8126 15.7679 12.5582 15.7679 12.293C15.7679 12.0278 15.6625 11.7734 15.475 11.5859L12.707 8.81792C12.5196 8.63045 12.2652 8.525 12 8.525Z" fill="#FF4500"/>
+                            </svg>
+                            <span>INFINITY</span>
+                        </div>
+                        <h1>WELCOME TO</h1>
+                        <p>Log in to get in the moment updates on the things that interest you.</p>
+
+                        <form>
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="Username" id="username">
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" placeholder="Password" id="password">
+                            </div>
+                            <button type="submit" class="sign-in-btn" >SIGN IN</button>
+                        </form>
+
+                        <p class="signup-link">Don't have an account? <a href="#" id="showRegister">Sign Up Now</a></p>
+                        <p class="errorText" id="errorText">
+                        <div class="or-separator">
+                            <span>Or</span>
+                        </div>
+
+                        <div class="social-login">
+                            <p>Continue with social media</p>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon google"><i class="fab fa-google"></i></a>
+                                <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Register Form Content -->
+                    <div class="form-content register-form" id="registerForm">
+                        <div class="logo">
+                             <!-- SVG Logo for INFINITY -->
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM13.0607 10.9393C13.6464 10.3536 14.5964 10.3536 15.1822 10.9393L17.5147 13.2718C18.1005 13.8575 18.1005 14.8075 17.5147 15.3932C16.929 15.9789 15.979 15.9789 15.3932 15.3932L12 12L8.6068 15.3932C8.02103 15.9789 7.07103 15.9789 6.48526 15.3932C5.89949 14.8075 5.89949 13.8575 6.48526 13.2718L8.81774 10.9393C9.4035 10.3536 10.3535 10.3536 10.9393 10.9393L12 12L13.0607 10.9393ZM12 8.525C11.7348 8.525 11.4804 8.63045 11.293 8.81792L8.525 11.5859C8.33753 11.7734 8.23208 12.0278 8.23208 12.293C8.23208 12.5582 8.33753 12.8126 8.525 13L11.293 15.768C11.4804 15.9555 11.7348 16.0609 12 16.0609C12.2652 16.0609 12.5196 15.9555 12.707 15.768L15.475 13C15.6625 12.8126 15.7679 12.5582 15.7679 12.293C15.7679 12.0278 15.6625 11.7734 15.475 11.5859L12.707 8.81792C12.5196 8.63045 12.2652 8.525 12 8.525Z" fill="#FF4500"/>
+                            </svg>
+                            <span>INFINITY</span>
+                        </div>
+                        <h1>JOIN INFINITY</h1>
+                        <p>Create your account to get the latest updates and connect with others.</p>
+
+                        <form>
+                            <div class="input-group">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" placeholder="Email Address" id="rEmail">
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="Username" id="rUsername">
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" placeholder="Password" id="rPassword">
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" placeholder="Confirm Password" id="rCPassword">
+                            </div>
+                            <button type="submit" class="sign-up-btn">SIGN UP</button>
+                        </form>
+
+                        <p class="signup-link">Already have an account? <a href="#" id="showLogin">Sign In</a></p>
+                        <p class="errorText" id="rErrorText">
+                        <div class="or-separator">
+                            <span>Or</span>
+                        </div>
+
+                        <div class="social-login">
+                            <p>Continue with social media</p>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon google"><i class="fab fa-google"></i></a>
+                                <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right panel: Info section -->
+            <div class="panel info-panel">
+                <div class="overlay"></div>
+                <div class="info-content">
+                    <!-- SVG Logo for INFINITY in info panel -->
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM13.0607 10.9393C13.6464 10.3536 14.5964 10.3536 15.1822 10.9393L17.5147 13.2718C18.1005 13.8575 18.1005 14.8075 17.5147 15.3932C16.929 15.9789 15.979 15.9789 15.3932 15.3932L12 12L8.6068 15.3932C8.02103 15.9789 7.07103 15.9789 6.48526 15.3932C5.89949 14.8075 5.89949 13.8575 6.48526 13.2718L8.81774 10.9393C9.4035 10.3536 10.3535 10.3536 10.9393 10.9393L12 12L13.0607 10.9393ZM12 8.525C11.7348 8.525 11.4804 8.63045 11.293 8.81792L8.525 11.5859C8.33753 11.7734 8.23208 12.0278 8.23208 12.293C8.23208 12.5582 8.33753 12.8126 8.525 13L11.293 15.768C11.4804 15.9555 11.7348 16.0609 12 16.0609C12.2652 16.0609 12.5196 15.9555 12.707 15.768L15.475 13C15.6625 12.8126 15.7679 12.5582 15.7679 12.293C15.7679 12.0278 15.6625 11.7734 15.475 11.5859L12.707 8.81792C12.5196 8.63045 12.2652 8.525 12 8.525Z" fill="#FFFFFF"/>
+                    </svg>
+                    <h2>INFINITY</h2>
+                    <p>Sign up now to unlock a world of personalized content, seamless connections, and endless possibilities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/loginScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+GET http://localhost:5000/
+
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "username": "kled0ng123",
+    "password": "admin123",
+    "confirmPassword": "admin123",
+    "email": "myemail123@gmail.com"
+}
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "username": "kled0ng123",
+    "password": "admin123"
+}

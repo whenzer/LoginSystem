@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Original: A gradient for the overall background */
+    background: linear-gradient(135deg, #FF6F61, #E62B0A);
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.main-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-container {
+    display: flex;
+    background-color: #fff; /* Main card background remains clean white */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Adjusted max-width for desktop */
+    width: 90%;
+    min-height: 750px; /* Base min-height for desktop content space (Login) */
+    overflow: hidden;
+    transition: min-height 0.6s ease-in-out; /* Add transition for height change */
+    position: relative; /* Needed for absolute positioning of back button */
+}
+
+/* Taller min-height for the registration page in desktop view */
+.login-container.show-register-desktop {
+    min-height: 900px !important; /* Adjusted height slightly downward for better fit */
+}
+
+/* Styling for the back button */
+.back-button {
+    position: absolute;
+    top: 25px; /* Adjust as needed for vertical positioning */
+    left: 25px; /* Adjust as needed for horizontal positioning */
+    color: #FF4500; /* Matching your primary brand color */
+    font-size: 1.8em; /* Large enough to be easily seen */
+    text-decoration: none;
+    z-index: 10; /* Ensure it's above other content */
+    padding: 10px; /* Make it easier to click/tap */
+    border-radius: 50%; /* Optional: for a circular hit area */
+    cursor: pointer; /* NEW: Added pointer cursor */
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+
+/* Base panel styles (left and right halves of the display) */
+.panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box; /* Include padding in width/height */
+    position: relative; /* For inner absolute positioning */
+}
+
+/* Specific styles for the Left Panel (Form Panel) */
+.form-panel {
+    background-color: #fff;
+    overflow: hidden; /* Crucial to clip sliding forms on desktop */
+}
+
+/* Container for the forms to slide */
+.forms-wrapper {
+    position: absolute; /* Desktop positioning */
+    width: 200%; /* Desktop width */
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex; /* Arrange forms horizontally on desktop */
+    transition: transform 0.6s ease-in-out; /* Smooth slide transition */
+}
+
+.form-content {
+    width: 50%; /* Each form takes 50% of the wrapper's width on desktop */
+    flex-shrink: 0; /* Prevent forms from shrinking on desktop */
+    padding: 40px; /* Standard padding for desktop */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 1; /* Default visible state */
+    transition: opacity 0.3s ease-in-out; /* Fade transition for content */
+}
+
+/* When showing the register form, shift the wrapper left */
+.forms-wrapper.show-register {
+    transform: translateX(-50%); /* Slide to the left to show register form */
+}
+
+/* When showing the login form, wrapper is at default position (translateX(0)) */
+.forms-wrapper.show-login {
+    transform: translateX(0); /* Ensure login form is visible */
+}
+
+
+/* Specific styles for the Right Panel (Info Panel) */
+.info-panel {
+    /* Original: Placeholder image */
+    background-image: url('https://via.placeholder.co/800x600/FF4500/E62B0A?text=Cityscape');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+}
+.info-panel .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Original: Overlay gradient */
+    background: linear-gradient(to right, rgba(255, 69, 0, 0.7), rgba(230, 43, 10, 0.7));
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.info-panel .info-content {
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    max-width: 80%;
+}
+.info-panel .info-content img {
+    height: 60px;
+    margin-bottom: 20px;
+}
+.info-panel .info-content h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.info-panel .info-content p {
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+/* General component styles */
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Styling for the SVG logo */
+.logo svg {
+    height: 40px; /* Match desired size */
+    width: 40px;
+    margin-right: 10px;
+    /* Ensure the fill is correct based on original palette */
+    fill: #FF4500; /* For the infinity symbol itself */
+}
+
+/* Specific fill for the info panel logo, which should be white */
+.info-panel .info-content svg {
+    fill: #FFFFFF;
+}
+
+
+.logo span {
+    font-size: 2em;
+    font-weight: 700;
+    /* Original: Logo text color */
+    color: #FF4500;
+}
+
+h1 {
+    font-size: 1.5em;
+    color: #333; /* Keep dark for contrast */
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 0.9em;
+    color: #666; /* Keep dark for contrast */
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.input-group input {
+    width: calc(100% - 60px);
+    padding: 15px 15px 15px 45px;
+    /* Original: Input border color */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    /* Original: Input focus border color */
+    border-color: #FF4500;
+}
+
+.sign-in-btn, .sign-up-btn { /* Added .sign-up-btn for consistency */
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    /* Original: Button background */
+    background-color: #FF4500;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.sign-in-btn:hover, .sign-up-btn:hover {
+    /* Original: Button hover background */
+    background-color: #E62B0A;
+}
+
+.signup-link {
+    margin-top: 25px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.signup-link a {
+    /* Original: Link color */
+    color: #FF4500;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for error text */
+.errorText {
+    color: red; /* Make it red to stand out as an error */
+    font-size: 0.8em; /* Slightly smaller than regular text */
+    margin-top: 5px; /* Small margin above */
+    margin-bottom: 5px; /* Adjusted to 5px for less space */
+    text-align: center; /* Center the error message */
+    width: 100%; /* Take full width to center text */
+    max-width: 300px; /* Align with input group max-width */
+}
+
+.or-separator {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.or-separator::before,
+.or-separator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    /* Original: Separator line color */
+    background-color: #ddd;
+}
+
+.or-separator::before {
+    left: 0;
+}
+
+.or-separator::after {
+    right: 0;
+}
+
+.or-separator span {
+    background-color: #fff;
+    padding: 0 10px;
+    color: #999;
+    font-size: 0.9em;
+}
+
+.social-login {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.social-login p {
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* Original: Social icon border color */
+    border: 1px solid #ddd;
+    /* Original: Social icon default color */
+    color: #666; /* Ensures the icon color is visible */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    opacity: 1; /* Ensures icons are not transparent */
+}
+
+.social-icon i {
+    font-size: 1.2em; /* Ensures the icon has a visible size */
+    color: inherit; /* Inherit color from parent .social-icon */
+    line-height: 1; /* Helps with vertical alignment */
+}
+
+/* Social icon hover colors remain brand-specific */
+.social-icon.facebook:hover {
+    background-color: #3b5998;
+    color: #fff;
+    border-color: #3b5998;
+}
+
+.social-icon.twitter:hover {
+    background-color: #00acee;
+    color: #fff;
+    border-color: #00acee;
+}
+
+.social-icon.google:hover {
+    background-color: #ea4335;
+    color: #fff;
+    border-color: #ea4335;
+}
+
+.social-icon.linkedin:hover {
+    background-color: #0077b5;
+    color: #fff;
+    border-color: #0077b5;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Back button is now visible on mobile */
+    .back-button {
+        display: block; /* Ensure it's displayed */
+    }
+
+    .login-container {
+        flex-direction: column;
+        width: 95%; /* Adjust width for mobile */
+        margin: 20px auto;
+        min-height: auto; /* Allow height to adjust freely on mobile */
+        height: auto; /* Ensure no fixed height prevents content from showing */
+    }
+
+    .info-panel {
+        display: none; /* Hide the right section on smaller screens for simplicity */
+    }
+
+    .panel {
+        padding: 0; /* Remove panel padding to allow form-content to control it */
+        height: auto; /* Ensure panels can grow on mobile */
+    }
+
+    .forms-wrapper {
+        position: relative; /* Revert to normal flow for mobile */
+        width: 100%; /* Full width on mobile */
+        transform: none !important; /* Disable transforms */
+        transition: none !important;
+        flex-direction: column; /* Stack forms vertically */
+        height: auto; /* Allow height to adjust to content */
+    }
+
+    .form-content {
+        width: 100%; /* Full width on mobile */
+        /* Adjusted padding-top to create space for the back button */
+        padding: 70px 40px 40px 40px; /* Top padding adjusted, other paddings consistent */
+        box-sizing: border-box; /* Ensure padding is included in the width/height */
+        /* Adjusted timing function for smoother start/end and added padding to transition */
+        transition: max-height 0.8s cubic-bezier(0.25, 1, 0.25, 1), /* Ease out expo */
+                    opacity 0.6s cubic-bezier(0.25, 1, 0.25, 1);
+        max-height: 0; /* Initially hidden with max-height */
+        opacity: 0; /* Initially hidden with opacity */
+        overflow: hidden; /* Hide overflow during transition */
+        display: flex; /* Always display flex but control visibility via max-height/opacity */
+        height: auto; /* Let content define height when visible */
+        will-change: max-height, opacity; /* Removed padding from will-change as it's no longer transitioning */
+    }
+
+    .form-content.active-mobile {
+        max-height: 1000px; /* Expand to show content */
+        opacity: 1; /* Fully visible */
+        /* Padding is now consistent, so no need to change here for transition */
+    }
+
+    /* Adjust spacing for mobile to fit content (these will apply when form-content is active) */
+    .form-content p {
+        margin-bottom: 20px;
+    }
+    .signup-link {
+        margin-top: 15px;
+    }
+    .or-separator {
+        margin: 20px 0;
+    }
+    .social-login {
+        margin-top: 15px;
+    }
+
+    .form-panel .logo {
+        margin-top: 10px;
+    }
+
+    .form-panel h1 {
+        font-size: 1.3em;
+    }
+
+    .input-group, .sign-in-btn, .or-separator {
+        max-width: 100%;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .panel {
+        padding: 15px 10px;
+    }
+
+    .logo span {
+        font-size: 1.6em;
+    }
+
+    .input-group input {
+        padding: 10px 10px 10px 35px;
+    }
+
+    .sign-in-btn {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9em;
+    }
+
+    .form-content {
+        padding: 15px; /* More aggressive padding reduction for very small screens */
+    }
+}
