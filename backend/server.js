@@ -8,7 +8,7 @@ import bcrypt from 'bcrypt';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const PORT = 3000;
+const PORT = process.env.PORT || 8080;
 const app = express();
 
 app.use(express.static(path.resolve(__dirname, "../frontend")));
@@ -46,4 +46,6 @@ app.post("/register", async (req, res) =>{
 });
 
 
-app.listen(PORT);
+app.listen(PORT, ()=>{
+    `Server started on port ${PORT}`;
+});
